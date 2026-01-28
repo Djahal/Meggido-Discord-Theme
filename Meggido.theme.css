@@ -1,0 +1,1428 @@
+/**
+* @name Meggido's Theme
+* @author Meggido
+* @version 1.0
+* @description 🔶 A clearer theme for Discord.
+
+*/
+
+:root {
+/* BOX SHADOW DES REACTIONS : box-shadow: rgb(104, 240, 228) 0px 0px 16px; */
+--gradient-primary: 103, 58, 183; /* DEFAULT: 103,58,183 */
+--gradient-secondary: 63, 81, 181; /* DEFAULT: 63,81,181 */
+/* --gradient-tertiary: 103, 58, 183; */ /* DEFAULT: 103,58,183 */
+/* --gradient-quaternary: 63, 81, 181; */ /* DEFAULT: 63,81,181 */
+--gradient-direction: 320deg; /* DEFAULT: 320deg */
+--gradient-20: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary), 0.2), rgb(var(--gradient-secondary), 0.2));
+--gradient-40: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary), 0.4), rgb(var(--gradient-secondary), 0.4));
+--gradient-50: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary), 0.5), rgb(var(--gradient-secondary), 0.5));
+--gradient-60: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary), 0.6), rgb(var(--gradient-secondary), 0.6));
+--gradient-90: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary), 0.9), rgb(var(--gradient-secondary), 0.9));
+--gradient: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary)), rgb(var(--gradient-secondary)));
+/* --selected: linear-gradient(var(--gradient-direction), rgba(167, 53, 212), rgba(189, 99, 58)); */
+--selected: linear-gradient(var(--gradient-direction), rgb(121, 70, 209), rgb(77, 97, 209));
+--selected-40: linear-gradient(var(--gradient-direction), rgba(121, 70, 209, 0.4), rgba(77, 97, 209, 0.4));
+--selected-60: linear-gradient(var(--gradient-direction), rgba(121, 70, 209, 0.6), rgba(77, 97, 209, 0.6));
+--selected-80: linear-gradient(var(--gradient-direction), rgba(121, 70, 209, 0.8), rgba(77, 97, 209, 0.8));
+
+--hovered-45: linear-gradient(var(--gradient-direction), rgb(165, 40, 150, 0.45), rgb(63,79,251, 0.45));
+--hovered: linear-gradient(var(--gradient-direction), rgb(165, 40, 150, 0.7), rgb(63,79,251, 0.7));
+--hovered-30: linear-gradient(var(--gradient-direction), rgb(165, 40, 150, 0.3), rgb(63,79,251, 0.3));
+--hovered-50: linear-gradient(var(--gradient-direction), rgb(165, 40, 150, 0.5), rgb(63,79,251, 0.5));
+/* --selected-100: linear-gradient(var(--gradient-direction), rgba(167, 53, 212), rgba(189, 99, 58)); */
+
+--orange-juice: linear-gradient(var(--gradient-direction), rgba(189, 99, 58), rgb(98, 46, 146));
+
+--notif: linear-gradient(var(--gradient-direction), rgba(189, 99, 58), rgba(103, 58, 183));
+--notif-30: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.35), rgba(103, 58, 183, 0.35));
+--notif-40: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.4), rgba(103, 58, 183, 0.4));
+--notif-50: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.5), rgba(103, 58, 183, 0.5));
+--notif-60: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.6), rgba(103, 58, 183, 0.6));
+--notif-70: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.7), rgba(103, 58, 183, 0.7));
+--notif-80: linear-gradient(var(--gradient-direction), rgba(189, 99, 58, 0.8), rgba(103, 58, 183, 0.8));
+
+--tooltip-gradient: linear-gradient(var(--gradient-direction), rgb(109, 43, 172), rgb(63,79,251));
+
+--green-flag-100: linear-gradient(var(--gradient-direction), rgb(34, 181, 201), rgb(29, 138, 111));
+--green-flag: linear-gradient(var(--gradient-direction), rgb(34, 181, 201, 0.8), rgb(29, 138, 111, 0.8));
+--green-flag-50: linear-gradient(var(--gradient-direction), rgb(34, 181, 201, 0.5), rgb(29, 138, 111, 0.5));
+
+--reactions-idle: linear-gradient(var(--gradient-direction), rgb(85, 55, 10, 1), rgb(37, 17, 12, 1));
+--reactions-idle-50: linear-gradient(var(--gradient-direction), rgb(85, 55, 10, 0.5), rgb(37, 17, 12, 0.5));
+--reactions-idle-70: linear-gradient(var(--gradient-direction), rgb(85, 55, 10, 0.7), rgb(37, 17, 12, 0.7));
+--reactions-idle-30: linear-gradient(var(--gradient-direction), rgb(85, 55, 10, 0.3), rgb(37, 17, 12, 0.3));
+
+--red-gradient: linear-gradient(var(--gradient-direction), rgb(204, 71, 31), rgb(104, 27, 13));
+--red-gradient-70: linear-gradient(var(--gradient-direction), rgba(204, 71, 31, 0.7), rgba(104, 27, 13, 0.7));
+--red-gradient-50: linear-gradient(var(--gradient-direction), rgba(204, 71, 31, 0.5), rgba(104, 27, 13, 0.5));
+
+--smooth-purple: linear-gradient(var(--gradient-direction), rgb(104, 65, 170) /* 120, 75, 197 */, rgb(44, 55, 156)); /* 121, 70, 209 */
+--smooth-purple-40: linear-gradient(var(--gradient-direction), rgb(104, 65, 170, 0.4), rgb(44, 55, 156, 0.4));
+--smooth-purple-70: linear-gradient(var(--gradient-direction), rgba(104, 65, 170, 0.7), rgba(44, 55, 156, 0.7)); /* 42, 52, 141 */
+
+--only-purple-50: linear-gradient(var(--gradient-direction), rgb(154, 73, 167, 0.5), rgba(92, 27, 90, 0.5));
+--only-purple-70: linear-gradient(var(--gradient-direction), rgb(154, 73, 167, 0.7), rgba(92, 27, 90, 0.7));
+--only-purple: linear-gradient(var(--gradient-direction), rgb(154, 73, 167), rgba(92, 27, 90));
+
+--dark-purple: linear-gradient(var(--gradient-direction), rgb(121, 70, 209), rgb(25, 31, 83));
+--dark-purple-30: linear-gradient(var(--gradient-direction), rgb(121, 70, 209, 0.3), rgb(25, 31, 83, 0.3));
+--dark-purple-70: linear-gradient(var(--gradient-direction), rgb(121, 70, 209, 0.7), rgb(25, 31, 83, 0.7));
+
+--premium-purple: linear-gradient(to right, rgb(133, 71, 198), rgb(184, 69, 193), rgb(171, 93, 138));
+--discord-server-booster: linear-gradient(to right,var(--guild-boosting-blue),var(--guild-boosting-purple));
+
+--primary-button: linear-gradient(var(--gradient-direction), rgb(126, 78, 216), rgb(58, 137, 189));
+
+/* TIP: BORDER-COLOR EN MODE GRADIENT : METTER UN ::BEFORE EN UNE COULEUR ET UN ::AFTER AVEC UN AUTRE COULEUR */
+
+/* RENDRE LA BORDURE TRANSPARENTE */
+/* .b4589bedc187b0eb-innerWrapper:after, .b4589bedc187b0eb-innerWrapper:before {
+    border: 2px solid transparent; */
+
+/* ON MET LE BEFORE */
+/* .b4589bedc187b0eb-innerWrapper:before {
+    border-color: var(--guild-boosting-purple);
+} */
+
+/* AFTER AVEC UN MASK */
+/* .b4589bedc187b0eb-innerWrapper:after {
+border-color: var(--guild-boosting-blue);
+-webkit-mask: linear-gradient(45deg, #000, transparent);
+mask: linear-gradient(45deg, #000, transparent);
+} */
+
+/* COULEUR DES SALONS */
+--foreground: var(--notif-40); /* DEFAULT: rgb(255, 255, 255, 0.05) // Messsages non lus*/
+--channel-hover: var(--hovered-45); /* DEFAULT: 255, 255, 255, 0.05 // Salon en hover */
+--interactive-hover: #eee; /* DEFAULT: #eee */
+
+/* SCROLL BAR */
+--scrollbar-auto-thumb: rgba(255, 166, 0, 0.8); /* BASE : var(--background-tertiary); */
+--scrollbar-auto-track: var(--background-secondary-alt); /* SILLAGE DU SCROLLBAR */
+--scrollbar-thin-thumb: rgba(255, 166, 0, 0.8); /* BASE : var(--background-tertiary); */
+--scrollbar-thin-track: var(--background-secondary-alt); /* BASE : TRANSPARENT */
+}
+/* SCROLL BAR */
+#app-mount ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 166, 0, 0.8);
+}
+
+/* POINTER DU TOOLTIP */
+#app-mount .c36707910f687430-tooltipPointer, .tooltip__4e35b .caret__5bc6a.caret--bottom__5bc6a.caret--center__5bc6a, .caretIcon__4e35b, .tooltipPrimary_c36707 .tooltipPointer_c36707 {
+    /* border-top-color: rgb(80, 88, 177) !important; */
+    display: none;
+}
+
+/* PROFIL */
+#app-mount ._37e49614b9f110a9-container {
+    background: var(--reactions-idle-50);
+    border-top: 1px solid rgba(255, 217, 0, 0.5);
+}
+
+/* LES TOOLTIPS */
+
+.vc-membercount-total {
+    color: rgb(255, 255, 255, 0.8);
+}
+.vc-membercount-online {
+    color: lightgreen;
+}
+
+#app-mount .c36707910f687430-tooltip, .tooltip__4e35b, [role="tooltip"], [class*="tooltip"], .tooltipContent__4e35b .text-sm\/medium_cf4812, .guildNameText_b1f768, ._918165dab2b1e10b-listItemTooltipContent {
+    color: gold !important;
+    text-align: center;
+    font-weight: 600;
+}
+#app-mount .c36707910f687430-tooltipPrimary, button.button__67645:hover /* Bouttons profil HOVER*/, .tooltipContent_c36707, .avatarWrapper__37e49:hover /* Avatar profil HOVER */, .avatarWrapper__37e49[aria-expanded="true"], [role="tooltip"] {
+    background: var(--tooltip-gradient) !important;
+    border-color: rgba(94, 27, 219, 0.822);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(255, 217, 0);
+}
+#app-mount .avatarWrapper__37e49 {
+    padding: 2px;
+}
+#app-mount .c36707910f687430-tooltipPrimary .text-sm\/normal_cf4812 { /* LE SOUS TEXTE DANS LES TOOLTIPS */
+    color: rgba(255, 255, 255, 0.8);
+}
+#app-mount .popoutContainer__0f481 { /* LE POP OUT DES RANGS SPÉCIFIQUES DÉBLOQUÉS AVEC NITRO */
+    background: var(--dark-purple);
+}
+#app-mount .popoutContainer__0f481 .ctaButton__8641f { /* BOUTON POP OUT DES RANGS SPÉCIFIQUES DÉBLOQUÉS AVEC NITRO */
+    background: var(--red-gradient-70);
+    box-shadow: 0 0 2px 1px rgba(255, 217, 0, 0.8);
+}
+#app-mount .popoutContainer__0f481 .ctaButton__8641f:hover { /* BOUTON POP OUT DES RANGS SPÉCIFIQUES DÉBLOQUÉS AVEC NITRO HOVER */
+    background: var(--green-flag);
+}
+#app-mount .popoutContainer__0f481 .ctaButton__8641f:hover /* .ctaButtonContent__8641f */ .boosterBadge__8641f { /* BOUTON POP OUT DES RANGS SPÉCIFIQUES DÉBLOQUÉS AVEC NITRO HOVER */
+    color: rgb(255, 0, 221);
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* SERVER RINGS */
+
+#app-mount .folderGroup__48112.isExpanded__48112 .folderGroupBackground__48112 {
+    background: var(--selected-60);
+}
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* CHAT */
+
+/* _5126c0cd07f243a0-message */
+
+/* I'M PRETTY SURE I'M NOT THE ONLY ONE TO FOLLOW THE TEXT I'M READING AND DISCORD MADE THE BUTTONS GO TOO FAR DOWN ON THE TEXT */
+[id^=message-accessories] + [class^=buttonContainer] > [class^=buttons] {
+    top: -32px !important; 
+}
+
+#app-mount .message__5126c:hover { /* Couleur des messages HOVER */
+    background: var(--notif-60);
+    border-radius: 5px;
+}
+#app-mount .reactionMe__23977 /* RÉACTIONS AUX MESSAGES --> SELECTED BY USER */{
+    background: var(--green-flag) !important;
+    box-shadow: rgb(104, 240, 228, 0.7) 0px 0px 8px;
+}
+#app-mount .reaction__23977 /* REACTIONS FORUM PANEL OUVERT */ , .reactionBtn__23977.forceShow__23977, .addReactButton__34c2c /* RÉACTIONS AUX MESSAGES */ {
+    background: var(--reactions-idle-50);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* MEILLEURE BORDURE POUR REACTIONS ET BOUTONS */
+}
+#app-mount .reaction__23977:hover, .reactionBtn__23977.forceShow__23977[aria-expanded="false"]:hover /* RÉACTIONS AUX MESSAGES HOVER*/{
+    background: var(--green-flag-50);
+}
+#app-mount .c19a557985eb7793-cozy.c19a557985eb7793-hasThread:after { /* LES BARRES DANS LES MESSAGES QUI POINTENT VERS LES THREADS */
+    border-color: rgb(240, 178, 50, 0.9);
+    border-width: 2px;
+}
+#app-mount ._9271d23503a01b50-container { /* L'encadré du Threads */
+    border: 1px solid rgb(240, 178, 50, 0.9);
+}
+#app-mount ._9271d23503a01b50-container:hover { /* L'encadré du Threads HOVER */
+    background: var(--dark-purple);
+}
+#app-mount ._9271d23503a01b50-container:hover ._9271d23503a01b50-timestamp, ._9271d23503a01b50-container:hover .c19a557985eb7793-threadMessageAccessoryPreview { /* Timestamp Threads HOVER */
+    color: white;
+}
+#app-mount .messageListItem__5126c .mentioned__5126c{ /* Couleur des Mentions */
+    background: var(--hovered-45);
+    border-radius: 5px;
+}
+#app-mount .messageListItem__5126c .mentioned__5126c:hover{ /* Couleur des Mentions dans les messages HOVER */
+    background: var(--hovered-30);
+}
+#app-mount .repliedMessageClickableSpine_c19a55 { /* LIEN CLICKABLE SUR UNE MENTION */
+    border-color: rgba(255, 255, 255, 0.7);
+}
+#app-mount .repliedMessageClickableSpine_c19a55.repliedMessageContentHovered_c19a55 { /* LIEN CLICKABLE SUR UNE MENTION HOVER */
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+#app-mount .flash__03436[data-flash="true"] { /* LIEN CLICKABLE SUR UNE MENTION --> MESSAGE SELECTED */
+    background: var(--red-gradient-70) !important;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px rgba(255, 217, 0, 0.6);
+}
+#app-mount .header_c19a55 .timestamp_c19a55 { /* TIMESTAMP DES MESSSAGES */
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.4);
+    font-weight: 600;
+}
+#app-mount .timestampVisibleOnHover_c19a55 { /* TIMESTAMP DES MESSSAGES, SUR LA GAUCHE */
+    text-align: center;
+    font-weight: 600;
+    width: 45px;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    margin-left: 0.8rem;
+    background: var(--reactions-idle-50);
+}
+#app-mount .timestampVisibleOnHover_c19a55:hover { /* Timestamp des messsages, sur la gauche HOVER */
+    background: var(--reactions-idle);
+}
+#app-mount .jumpToPresentBar__0f481, /* BARRE NOUVEAUX MESSAGES */.newMessagesBar__0f481.barBase__0f481   /* REVENIR AUX MESSAGES RÉCENTS BAR */ {
+    background: var(--red-gradient);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    opacity: 1;
+    box-shadow: 0 0 2px 1px gold;
+}
+#app-mount .topicsPillContainer__0f481  /* RESUME DES MESSAGES CHAT */ {
+    background: var(--only-purple);
+    opacity: 1;
+    box-shadow: 0 0 2px 1px gold;
+}
+#app-mount .jumpToPresentBar__0f481, /* BARRE NOUVEAUX MESSAGES */ .newMessagesBar__0f481.barBase__0f481 /* REVENIR AUX MESSAGES RÉCENTS BAR HOVER */, .newTopicsBarContainer__0f481 /* RESUME DES MESSAGES CHAT */{
+    background: var(--red-gradient);
+    box-shadow: 0 0 2px 1px gold;
+
+    &:hover {
+    background: var(--green-flag-100);
+    }
+}
+#app-mount .jumpToPresentBar__0f481 .barButtonBase__0f481 {  /* Couleur du texte dans la bottom bar */
+    color: rgba(255, 255, 255, 0.8)
+}
+#app-mount .jumpToPresentBar__0f481:hover .barButtonBase__0f481  { /* Couleur du texte dans la bottom bar HOVER*/
+    color: rgba(255, 255, 255, 1)
+}
+/* BOUTONS ET EMOJIS DANS LA BARRE EN BAS */
+.button__24af7:hover,
+.emojiButtonHovered__04eed,
+.emojiButtonHovered__04eed[aria-expanded="true"],
+.attachButton__0923f[aria-expanded="true"],
+.button_aa63ab:has(.activeButtonChild_aa63ab) { /* BOUTON "ENVOYER" */
+
+    background: var(--tooltip-gradient);
+    /* border-color: rgba(94, 27, 219, 0.822); */
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(255, 217, 0);
+    opacity: 1;
+    transition: none;
+}
+.button_aa63ab[aria-label="Envoyer un message"] {
+    margin-right: 5px;
+
+    &:hover .activeButtonChild_aa63ab .sendIcon_aa63ab {
+    color: gold;
+    }
+}
+#app-mount .reactionBtn_f8896c, .reaction_f8896c /* REACTION EMOJI PANEL DROITE ET AUTRE */{
+    background: var(--reactions-idle-30);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#app-mount .reactionBtn_f8896c:hover .icon_f8896c, .addReactButton__34c2c:hover .icon__23977 /* Icone HOVER */, .reactionBtn_f8896c[aria-expanded="true"] .icon_f8896c, .largeReactionBtn__23977[aria-expanded="true"] .icon_f8896c, .reactionBtn_f8896c:hover .icon__23977, .reactionBtn_f8896c[aria-expanded="true"] .icon__23977 /* ICONE LORSQUE PANNEL OUVERT */{
+    color: yellow;
+}
+#app-mount .reactionBtn_f8896c[aria-expanded="true"] /* BG LORSQUE PANNEL OUVERT */{
+    background: var(--green-flag);
+}
+#app-mount .reactionBtn_f8896c.f8896c4f6be18f59-active.addReactButton__34c2c { /* COULEUR DU TEXTE QUAND LE PANEL DES EMOJIS EST OUVERT DANS LES FORUMS */
+    color: white;
+}
+#app-mount .reactionBtn_f8896c[aria-expanded="true"], .addReactButton__34c2c[aria-expanded="true"] { /* COULEUR BOUTON QUAND PANEL OUVERT */
+    background: var(--green-flag);
+}
+#app-mount .emojiItem_fc7141.emojiItem_fc7141:hover, .emojiItemSelected_fc7141 { /* PANNEL DES EMOJIS HOVER */
+    background: var(--green-flag);
+}
+.separator_f84418, .separator_aa63ab { /* PANNEL DES EMOJIS SEPARATOR */
+    background:rgba(255, 255, 255, 0.8);
+}
+.navButton__08434 { /* PANNEL DES EMOJIS LES 3 CATÉGORIES */
+
+    &:hover {
+        background: var(--channel-hover);
+    }
+
+    &.navButtonActive__08434 {
+        background: var(--selected);
+        border-color: color-mix(in srgb, rgba(81, 160, 222) 70%, rgba(198, 198, 198, 0.1));
+	    box-shadow: 0 0 6px color-mix(in srgb,  rgba(198, 198, 198) 40%, transparent);
+    }
+
+}
+.categorySection_c656ac { /* PANNEL DES EMOJIS LES CATÉGORIES */
+    background: var(--reactions-idle-50);
+    border-radius: 8px !important;
+}
+#app-mount .buttonsInner__5126c.wrapper_f7ecac { /* BARRE DES RÉACTIONS DE CHAQUE MESSAGE */
+    background: var(--dark-purple);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#app-mount .button_f7ecac:hover /* BARRE DES RÉACTIONS AUX MESSAGES HOVER *//* , .reactionBtn_f8896c:hover.reactionBtn_f8896c:hover */ {
+    background: var(--green-flag);
+    /* border: 1px solid var(--hovered); */
+    /* color: white; */
+}
+#app-mount .button_f7ecac:active /* BARRE DES RÉACTIONS AUX MESSAGES CLIC *//* , .reactionBtn_f8896c:hover.reactionBtn_f8896c:hover */ {
+    background: var(--green-flag-100);
+}
+#app-mount .clipContainer__841c8 .replyBar__841c8, .channelTextArea_f75fb0 .stackedBars__74017 { /* REPONSE A MESSAGE POP UP - BG*/
+    background: var(--smooth-purple)/* rgb(104, 27, 13) */;
+}
+#app-mount .clipContainer__841c8 .replyBar__841c8 .replyLabel__841c8, .threadSuggestionBar__841c8 ._841c8f861f7b2704-text, .closeButton_e876a8 .closeIcon_e876a8 { /* COULEUR TEXTE REPONSE A MESSAGE POP UP */
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+#app-mount .clipContainer__841c8 { /* COULEUR REP MESSAGE MENTION BORDURE */
+    box-shadow: 0 0 2px 1px gold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#app-mount  .actions__841c8 [role=switch][aria-checked="false"] .mentionButton__841c8 { /* COULEUR REP MESSAGE MENTION DESACTIVEE*/
+    /* color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.8); */
+    color: gold !important;
+}
+#app-mount .actions__841c8 [role=switch][aria-checked="true"] .mentionButton__841c8 { /* COULEUR REP MESSAGE MENTION ACTIVE */
+    color:rgb(1, 250, 63) !important;
+}
+#app-mount .actions__841c8 .closeButton_e876a8:hover .closeIcon_e876a8 { /* COULEUR BOUTON FERMER MENTION */
+    color: red !important;
+}
+#app-mount .messageListItem__5126c .replying__5126c { /* MESSAGE AUQUEL ON REPOND COULEUR */
+    background: var(--smooth-purple);
+    border-radius: 5px;
+}
+#app-mount .actions__841c8 .separator__841c8 { /* SEPARATOR */
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+#app-mount .clipContainer__841c8 .threadSuggestionBar__841c8 { /* REPONSE A MESSAGE POP UP - SUGGESTION DE THREAD */ 
+    background: var(--reactions-idle);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+#app-mount .clipContainer__841c8 .threadSuggestionBar__841c8:hover .createThreadButton__841c8 { /* REPONSE A MESSAGE POP UP - SUGGESTION DE THREAD -CREER UN FIL TEXTE */
+    color: gold !important;
+}
+#app-mount .channelTextAreaDisabled__74017 .scrollableContainer__74017 { /* TEXTAREA CHAT DESACTIVE */
+    opacity: 1;
+    background: var(--red-gradient-50);
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px gold !important;
+}
+#app-mount .textAreaDisabled__74017 .slateTextArea_ec4baf { /* TEXTAREA NOT ALLOWED DANS SALON, COULEUR DU TEXTE */
+    color: white !important;
+    text-align: center;
+    font-weight: bold;
+}
+#app-mount .wrapper__44df5 /* TEXTAREA SUIVRE ANNONCES */ {
+    background: var(--reactions-idle);
+    border: none;
+    box-shadow: 0 0 2px 1px gold;
+}
+#app-mount .button__44df5 /* LE BOUTON POUR SUIVRE ANNONCES */ {
+    background: var(--green-flag);
+    border: none;
+    border-radius: 5px;
+}
+#app-mount .button__44df5:hover /* LE BOUTON POUR SUIVRE ANNONCES HOVER*/ {
+    box-shadow: 0 0 4px 2px gold;
+    color: white;
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017 { /* TEXTAREA CHAT */
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px rgba(255, 255, 255, 0.5);
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017:not(:has(._740174f3d6a2c8fe-innerDisabled)):hover { /* TEXTAREA CHAT HOVER*/
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px rgba(255, 255, 255);
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017 .placeholder__1b31f  { /* TEXTAREA CHAT PLACEHOLDER*/
+    color: rgba(255, 255, 255, 0.4);
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017:hover .placeholder__1b31f { /* TEXTAREA CHAT PLACEHOLDER HOVER*/
+    color: rgba(255, 255, 255, 0.7);
+    /* font-style: italic; */
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017:has(.slateTextArea_ec4baf:focus) .placeholder__1b31f{ /* TEXTAREA CHAT PLACEHOLDER FOCUS*/
+    color: rgba(255, 255, 255, 0.3);
+    /* font-style: normal !important; */
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017:has(.slateTextArea_ec4baf:focus) { /* TEXTAREA CHAT FOCUS*/
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */3px rgb(255, 2, 2);
+}
+#app-mount .scrollableContainer__74017.themedBackground__74017:not(:has(.slateTextArea_ec4baf .emptyText__1464f)), .themedBackground__74017:has(._1464f16f3e3c14a9-inlineVoid) { /* TEXTAREA CHAT TYPING*/
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */3px rgb(88, 233, 4) !important;
+}
+#app-mount ._4bd5201c86a2042b-tabularNumbers.b216994de061a9e2-cooldownText/* .b216994de061a9e2-slowModeIcon */ { /* TEXTE DU MODE LENT DES SALONS */
+    color: rgb(255, 255, 255) !important;
+}
+#app-mount .b216994de061a9e2-cooldownWrapper { /* TEXTE DU MODE LENT DES SALONS */
+    margin-top: 8px;
+    margin-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+    box-shadow: 0 0 2px 1px gold;
+    background: var(--red-gradient);
+    border-radius: 5px;
+}
+#app-mount .buttonContainer_e6e74f .button_e6e74f { /* APP BUTTON*/
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px rgba(255, 255, 255, 0.5);
+}
+#app-mount .buttonContainer_e6e74f .button_e6e74f:hover { /* APP BUTTON HOVER */
+    background: var(--notif-50);
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px rgba(88, 233, 4);
+}
+#app-mount .buttonContainer_e6e74f .button_e6e74f.buttonActive_e6e74f { /* APP BUTTON ACTIVE */
+    background: var(--notif);
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */2px rgb(88, 233, 4);
+}
+#app-mount .codeContainer__75297 .scrollbarGhostHairline__506b3, .pollContainer_b7e1cb, .container_f69538.embed_f69538, .markup__75297 code.inline { /* CODE BLOCKS */
+    background: var(--reactions-idle); 
+    border: 1px solid rgba(255, 217, 0, 0.3);
+}
+#app-mount .pollContainer_b7e1cb, .container_f69538.embed_f69538 { /* LES SONDAGES DANS LES MESSAGES - BACKGROUND */
+    background: var(--reactions-idle);
+}
+#app-mount .pollContainer_b7e1cb .text-sm\/normal_cf4812 { /* TEXTE DES SONDAGES DANS LES MESSAGES */
+    color: rgba(255, 255, 255, 0.8) !important; 
+}
+#app-mount .pollContainer_b7e1cb .answer__4c520.normalStylesDefault_a1443c { /* TEXTE DES SONDAGES DANS LES MESSAGES */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+#app-mount .pollContainer_b7e1cb .votePercentageBar__4c520 { /* BARRE DES POURCENTAGES NORMALE */
+    background: var(--red-gradient-70);
+}
+#app-mount .pollContainer_b7e1cb .victorStyles_a1443c .votePercentageBar__4c520 { /* BARRE DES POURCENTAGES VICTOIRE */
+    background: var(--green-flag-100);
+}
+#app-mount .pollContainer_b7e1cb .answerInner__4c520:has(.answerSelectionIcon__4c520) .votePercentageBar__4c520 { /* BARRE DES POURCENTAGES PERSO */
+    background: var(--selected) !important;
+}
+
+#app-mount .container_f69538.embed_f69538 .victorAnswerText_f69538 { /* RESULTAT DES SONDAGES TEXTE */
+    font-size: 1em;
+}
+#app-mount .container_f69538.embed_f69538 svg.victorIcon_f69538 { /* RESULTAT DES SONDAGES ICONE */
+    width: 1.2em;
+    height: 1.2em;
+}
+#app-mount .container_f69538.embed_f69538 .text-xs\/medium_cf4812.fontScaling_cf4812 { /* RESULTAT DES SONDAGES TEXTE */
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.7);
+    font-size: 0.9em;
+}
+#app-mount .container_f69538.embed_f69538 .button_f69538, .pollContainer_b7e1cb .secondaryButtonPresentation__0be77 { /* RESULTAT DES SONDAGES BUTTON */
+    /* border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px; */
+    box-shadow: 0 0 2px 1px rgba(255, 217, 0, 0.8) !important;
+    background: var(--red-gradient-70) !important;
+    color: white;
+}
+#app-mount .container_f69538.embed_f69538 .button_f69538:hover, /* BOUTON SUPPRIMER VOTE */.pollContainer_b7e1cb .secondaryButtonPresentation__0be77:hover, /* BOUTON VOTES HOVER */.pollContainer_b7e1cb .detailsTextButton__0be77:hover { /* RESULTAT DES SONDAGES BUTTON HOVER */
+    background: var(--green-flag) !important;
+    text-decoration: none;
+}
+#app-mount .pollContainer_b7e1cb .detailsTextButton__0be77 { /* BOUTON VOTES */
+    box-shadow: 0 0 2px 1px rgba(255, 217, 0, 0.8);
+    background: var(--red-gradient-70);
+    padding: 0 3px 0 3px ;
+}
+#app-mount .pollContainer_b7e1cb .detailsText__0be77 .fontScaling_cf4812  /* BOUTON VOTES COULEUR TEXTE */, /* PROMPT SÉLECTIONNER UNE RÉPONSE */.header__0be77 .prompt__0be77  {
+    color: white !important;
+}
+#app-mount .voteSelected__01c8c .text-md\/semibold_cf4812 /* PANNEL VOTES OUVERT TEXTE SELECTED */ {
+    color: white !important;
+}
+#app-mount .pollContainer_b7e1cb .buttonPresentation__0be77 /* BOUTON VOTER */{
+    background: var(--smooth-purple);
+    box-shadow: 0 0 2px 1px rgba(255, 217, 0, 0.8);
+}
+#app-mount .pollContainer_b7e1cb .buttonPresentation__0be77:hover /* BOUTON VOTER HOVER */{
+    background: var(--selected);
+    box-shadow: 0 0 4px 2px rgba(255, 217, 0, 0.8);
+}
+/* #app-mount .overlay ._36d072eab2b2e737-scroller::-webkit-scrollbar-track {
+    color: darkorchid;
+} */
+
+/*  #app-mount ._752971923a1e6683-markup.c19a557985eb7793-messageContent blockquote{
+    color: red !important;
+} */
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* OPENED CHAT ON THE RIGHT FOR FORUMS */
+
+#app-mount .chatLayerWrapper__01ae2 .titleWrapper__9293f:has(.cursorPointer_f75fb0) {
+    background: var(--red-gradient) !important;
+    padding: 6px;
+    border-radius: 7px;
+}
+#app-mount .chatLayerWrapper__01ae2 .titleWrapper__9293f:has(.cursorPointer_f75fb0):hover {
+    background: var(--green-flag) !important;
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f:has(.forumPostSidebarTitle_f75fb0) { /* FORUM PLEIN ÉCRAN SELECTED */
+    background: var(--selected);
+    padding: 6px 6px 6px 0;
+    border-radius: 7px;
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f { /* THREAD PLEIN ÉCRAN SELECTED */
+    background: var(--selected);
+    padding: 6px;
+    border-radius: 7px;
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f .text-md\/medium_cf4812 { /* THREAD PLEIN ÉCRAN SELECTED TITRE */
+    color: white;
+}
+#app-mount .upperContainer__9293f .icon__9293f { /* FORUM ICONE */
+    color: rgba(255, 255, 255, 0.85);
+}
+#app-mount .upperContainer__9293f .caret__9293f { /* LE ">" */
+    color: white;
+    margin: 0 8px 0 0 !important;
+    width: 18px;
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f:has(.forumPostSidebarTitle_f75fb0) .text-md\/medium_cf4812 { /* FORUM EN PLEIN ÉCRAN TEXTE */
+    color: rgba(255, 255, 255);
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f:has(.parentChannelName_f75fb0) .text-md\/medium_cf4812 { /* FORUM EN PLEIN ÉCRAN TEXTE PRECEDENT */
+    color: rgba(255, 255, 255, 0.8);
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f:has(.parentChannelName_f75fb0):hover .text-md\/medium_cf4812 { /* FORUM EN PLEIN ÉCRAN TEXTE PRECEDENT HOVER */
+    color: rgba(255, 255, 255);
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f + .divider__9293f { /* FORUM EN PLEIN ÉCRAN DIVIDER */
+    background: rgba(255, 255, 255, 0.8);
+}
+#app-mount .upperContainer__9293f .topic__6ec1a, .dot__9293f /* FORUM EN PLEIN ÉCRAN TEXTE INTITULÉ TOPIC */, .description__00de6 /* Description début du salon */, .headerText__99e7c /* TITRE MESSAGES PRIVES */, .title__1472a /* EN LIGNE SERVER PRIVÉS */, .header__7d20c /*  EN LIGNER SERVER PRIVÉ */, .sectionTitle_f391e3 /* DEMANDES */, .sectionTitle_dcc822 /* SPAMS */ {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 1px rgba(252, 248, 4);
+    /* font-size: 0.95em; */
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(+ .recentsIcon_c99c29), .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(.iconBadgeBottom__9293f) { /* MAJ - UPDATE AVAILABLE */
+    background: var(--red-gradient);
+    box-shadow: 0 0 6px 2px rgb(255, 255, 255, 0.7);
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(+ .recentsIcon_c99c29):hover, .iconWrapper__9293f:has(.iconBadgeBottom__9293f):hover { /* MAJ - UPDATE  HOVER */
+    background: var(--green-flag) !important;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(+ .recentsIcon_c99c29) ._496769951eb140fe-updateIconForeground  { /* MAJ - UPDATE  HOVER TEXTE*/
+    fill: white !important;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f .iconBadgeBottom__9293f { /* BADGE NEW MESSAGE ARRANGEMENT DE LA BULLE*/
+    bottom: 7px;
+    right: 6px;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(.iconBadgeBottom__9293f) { /* BADGE NEW MESSAGE */
+    padding-bottom: 0px;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:has(.iconBadgeBottom__9293f) .icon__9293f { /* BADGE NEW MESSAGE TEXTE */
+    color: white;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f { /* FILS, NOTIFS, PINS, ETC... */
+    /* border: 1px solid gold; */
+    border-radius: 5px;
+    padding: 5px;
+    height: auto;
+    margin: 0 5px;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f:hover { /* FILS, NOTIFS, PINS, ETC... HOVER */
+    background: var(--green-flag-50);
+    box-shadow: 0 0 6px 2px rgba(255, 217, 0, 0.6);
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f[aria-label="Fermer"] /* BOUTON FERMER FORUM CHAT A DROITE */,
+.contentHeader_e9e3ed .button_a22cb0[aria-label="Fermer"] /* BOUTON FERMER OPTIONS */ {
+    border: 2px solid red;
+
+    &:hover {
+        background: red;
+        box-shadow: none;
+
+        & .icon__9293f, & .icon_a22cb0 {
+        color: white;
+        }
+    }
+    
+}
+
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f.selected__9293f { /* FILS, NOTIFS, PINS, ETC... HOVER */
+    background: var(--green-flag) !important;
+    /* box-shadow: gold 0 0 6px;
+    border: 1px solid gold; */
+    box-shadow: 0 0 6px 2px gold;
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f[aria-expanded="true"] { /* FILS, NOTIFS, PINS, ETC... OPENED */
+    background: var(--green-flag);
+}
+#app-mount .upperContainer__9293f .toolbar__9293f .iconWrapper__9293f.selected__9293f .icon__9293f { /* FILS, NOTIFS, PINS, ETC... COULEUR ICONE SELECTED */
+    color: white;
+}
+/* #app-mount ._9293f6b2fc12398a-container {
+    min-height: 55px;
+} */
+#app-mount .chatLayerWrapper__01ae2 .titleWrapper__9293f .forumPostSidebarTitle_f75fb0 { /* FORUM SUR LA DROITE */
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding-left: 8px;
+}
+#app-mount .chatLayerWrapper__01ae2 .titleWrapper__9293f:hover .forumPostSidebarTitle_f75fb0 { /* FORUM SUR LA DROITE HOVER */
+    color: rgba(255, 255, 255) !important;
+}
+#app-mount .upperContainer__9293f .titleWrapper__9293f:has(.parentChannelName_f75fb0) { /* FORUM EN PLEIN ÉCRAN */
+    background: var(--red-gradient-70);
+    padding: 6px;
+    border-radius: 7px;
+
+    &:hover { /* FORUM EN PLEIN ÉCRAN HOVER */
+    background: var(--green-flag);
+    cursor: pointer;
+    }
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* POP OUT FORUMS */
+
+#app-mount .popout__76f04 { /* Pop out avec liste des forums */
+    background: var(--dark-purple);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+/* #app-mount ._76f047ded9fef6d4-title, ._76f047ded9fef6d4-name, ._76f047ded9fef6d4-timestamp, .more__76f04 {
+    color: rgba(255, 255, 255, 0.7);
+} */
+#app-mount .title__76f04, .more__76f04 { /* Couleur du titre et de voir tout */
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+#app-mount .more__76f04, .d5cd2da5733d0b6e-reactionEmojiDetailsDivider { /* Bordure au dessus de 'Voir tout' */
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#app-mount .b49891f8a231dbff-burstReactionTooltipPrompt { /* SUPER REACTION TOOLTIP */
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+}
+#app-mount .b49891f8a231dbff-burstReactionTooltipPromptClickable:hover .text-sm\/normal_cf4812 { /* SUPER REACTION TOOLTIP TEXTE HOVER*/
+    color: gold;
+}
+#app-mount .row__76f04, ._76f047ded9fef6d4-timestamp { /* Couleur du texte des liens */
+    color: rgba(255, 255, 255, 0.7);
+}
+#app-mount .row__76f04:hover { /* Couleur du texte des liens HOVER */
+    background: var(--orange-juice);
+    color: white;
+}
+#app-mount .more__76f04:hover { /* Couleur du texte des liens HOVER */
+    background: var(--orange-juice);
+    color: white;
+    border-radius: 5px;
+    border-top: 1px solid transparent;
+    /* border: 1px solid var(--notif); */
+    text-decoration: none;
+}
+#app-mount .f369dba7416c67f0-newPostsButton { /* Pop up forums New Post */
+    background: var(--red-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#app-mount .f369dba7416c67f0-newPostsButton:hover { /* Pop up forums New Post */
+    background: var(--green-flag-100);
+}
+#app-mount .f369dba7416c67f0-newPostsButton .text-md\/medium_cf4812, ._599fa27f4d2464c6-newChannel, .bar__7aaecText /* NEW MESSAGE POP UP BOTTOM SALONS */, ._2b1f52e43a8f1c02-baseShapeRound { /* COULEUR TEXTE DANS LA BULLE NEW MESSAGE/NOUVEAU */
+    color: rgba(255, 255, 255) !important;
+}
+#app-mount .f369dba7416c67f0-newPostsButton:hover .text-md\/medium_cf4812 { /* Couleur texte dans la bulle HOVER*/
+    color: white !important;
+}
+#app-mount .container__9a337.mainCard_f369db:has(.newMessageCount_faa96b) {/* Les carrés dans les forums scpéciaux NEW MESSAGE */
+    background: var(--red-gradient-70) !important;
+}
+#app-mount .container__9a337.mainCard_f369db:has(.newMessageCount_faa96b):hover {/* Les carrés dans les forums scpéciaux NEW MESSAGE HOVER*/
+    box-shadow: 0 0 8px 2px red;
+    background: var(--red-gradient) !important;
+}
+#app-mount .container__9a337.mainCard_f369db:has(.newBadge__9a337) {/* Les carrés dans les forums scpéciaux NOUVEAUX POSTS*/
+    background: var(--only-purple-50);
+    &:hover {
+        box-shadow: 0 0 8px 2px lightpink;
+        background: var(--only-purple); /* HOVER */
+    }
+}
+#app-mount .container__9a337.mainCard_f369db {/* Les carrés dans les forums scpéciaux */
+    /* background: var(--gradient-20); */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#app-mount .container__9a337.mainCard_f369db:hover {/* Les carrés dans les forums scpéciaux HOVER*/
+    box-shadow: 0 0 8px 2px lightblue;
+    background: var(--dark-purple-70);
+}
+#app-mount .container__9a337.mainCard_f369db:hover .heading-md\/extrabold_cf4812, .container__9a337.mainCard_f369db:hover .text-xs\/normal_cf4812, .container__9a337.isOpen__9a337 .heading-md\/extrabold_cf4812 {/* Les carrés dans les forums scpéciaux TEXTE */
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+#app-mount .container__9a337.isOpen__9a337 {/* Les carrés dans les forums scpéciaux OPEN*/
+    border: none;
+    box-shadow: none !important;
+    background: var(--selected) !important;
+}
+
+/* .newBadge__9a337 */
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* REACTION TOOLTIP */
+
+#app-mount .reactionTooltip_b49891, /* Cliquer et connaitre EMOJI server provenance */.emojiSection_d5cd2d {
+    background: var(--tooltip-gradient);
+}
+#app-mount .popoutContainer__0f481 .defaultColor__4bd52.text-md\/semibold_cf4812,
+.defaultColor__4bd52.text-md\/medium_cf4812,
+.emojiSection_d5cd2d,
+.roleName__8641f { /* NOM DE L'EMOJI DANS LES ENCADRÉS (CLIQUER DESSUS) */
+
+    & .overflow_b0dfc2 {
+    color: gold !important;
+    }
+}
+#app-mount .guildSection_d5cd2d{
+    background: var(--reactions-idle);
+}
+#app-mount .guildTitle_d5cd2d {
+    color: rgba(255, 255, 255, 0.9);
+}
+/* #app-mount .faf9c0f0be1b8685-didRender .overflow_b0dfc2 {
+    color: gold;
+} */
+#app-mount .reactionTooltipText_b49891 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+#app-mount .reactionEmojiDetailsClickable_d5cd2d, .d5cd2da5733d0b6e-ctaButton {
+    background: var(--red-gradient-70);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+#app-mount .reactionEmojiDetailsClickable_d5cd2d:hover, .d5cd2da5733d0b6e-ctaButton:hover {
+    background: var(--green-flag-100);
+    /* border: 1px solid rgba(255, 255, 255, 0.4);  */
+}
+
+/* ###### LES SALONS  ######*/
+
+#app-mount .sidebar__5e434 .header_f37cb1 { /* COULEUR DU NOM DU SERVEUR */
+    background: var(--smooth-purple);
+
+}
+#app-mount .sidebar__5e434 .container__2637a .bannerVisible_f37cb1 .header_f37cb1 { /* COULEUR DU NOM DU SERVEUR AVEC UNE BANNIERE */
+    background: transparent;
+
+}
+#app-mount .sidebar__5e434 .header_f37cb1:hover { /* COULEUR DU NOM DU SERVEUR HOVER */
+    background: var(--gradient) !important;
+
+    & .guildDropdown_f37cb1 { /* DROPDOWN NOM SERVEUR */
+
+        box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
+
+        &:hover {
+            background: var(--dark-purple);
+        }
+    }
+}
+.guildDropdown_f37cb1[aria-expanded="true"] {
+    background: var(--dark-purple);
+    box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
+}
+
+#app-mount .sidebar__5e434 .header_f37cb1:hover .text-md\/semibold_cf4812, .container__2637a.selected_f37cb1 .header_f37cb1 .text-md\/semibold_cf4812/* COULEUR DU NOM DU SERVEUR TEXTE HOVER & SELECTED */, .containerPadding__7aaec .bar__7aaec .text-xs\/semibold_cf4812 /* NEW MESSAGE POP UP BOTTOM SALONS TEXT */ {
+    color: white !important;
+}
+#app-mount .sidebar__5e434 .header_f37cb1:hover .button__353c4 { /* COULEUR DU NOM DU SERVEUR BOUTON HOVER */
+    color: white;
+    opacity: 1;
+}
+#app-mount .sidebar__5e434 .header_f37cb1 .button__353c4.open__353c4 { /* COULEUR DU NOM DU SERVEUR BOUTON SELECTED */
+    color: gold;
+    opacity: 1;
+}
+#app-mount .sidebar__5e434 .container__2637a.selected_f37cb1 .header_f37cb1 { /* COULEUR DU NOM DU SERVEUR SELECTED */
+    background: var(--selected) !important;
+}
+
+#app-mount .container_eff079:after, .sectionDivider__629e4, .sectionDivider_e6b769 { /* LES DIVISEURS EN HAUT DES CATÉGORIES */
+    height: 1px;
+    background: var(--notif);
+}
+#app-mount .e2d7b8b5e6e6e751-channelNotice { /* LES DIVISEURS EN HAUT DES EVENTS EN COURS */
+    border-bottom:  1px solid orange;
+}
+#app-mount .containerDefault__29444 .overflow_b0dfc2 /* TITRES DES CATÉGORIES */ {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 4px rgba(252, 248, 4, 0.7);
+}
+#app-mount .containerDefault__29444 .mainContent__29444:hover .overflow_b0dfc2, .containerDefault__29444 .addButtonIcon__29444:hover, .headerText__99e7c:hover { /* LES CATÉGORIES HOVER */
+    color: rgba(255, 255, 255);
+    text-shadow: 0 0 6px rgba(252, 248, 4);
+}
+#app-mount .channelInfo_c69b6d .textBadge__2b1f5 /* Pop up d'un nouveau salon crée */, ._7aaec78b97ff00f7-mentionsBar, /* ABSOLUMENT TOUS LES PETITES ICONES RONDES : ._2b1f52e43a8f1c02-baseShapeRound */.containerPadding__7aaec .bar__7aaec /* NEW MESSAGE POP UP BOTTOM SALONS */, ._5126c0cd07f243a0-buttonsInner ._2b1f52e43a8f1c02-baseShapeRound, ._599fa27f4d2464c6-newChannel { 
+    background: var(--red-gradient);
+    /* border: 1px solid rgba(255, 255, 255, 0.6); */
+    box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
+}
+#app-mount ._7aaec78b97ff00f7-mentionsBar:hover, .containerPadding__7aaec .bar__7aaec:hover  { /* NEW MENTIONS DANS LA BARRE DES SALONS et NEW MESSAGE POP UP BOTTOM SALONS */
+    background: var(--green-flag-100);
+}
+#app-mount ._2b1f52e43a8f1c02-number /* LES PETITS BADGES/ICONES SUR LES SALONS */, ._2b1f52e43a8f1c02-iconBadge, .numberBadge__2b1f5 {
+
+    box-shadow: 0 0 3px 1px rgb(255, 217, 0);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgb(167, 6, 6) !important;
+
+}
+
+#app-mount .containerDefault_c69b6d:has(.unreadImportant__2ea32) .basicChannelRowLink__2ea32 {
+    background: var(--foreground); /* COULEUR DES ÉVÈNEMENTS NON LUS */
+}
+#app-mount .containerDefault_c69b6d:has(.unreadImportant__2ea32) .basicChannelRowLink__2ea32 .name__2ea32 {
+    color: white; /* COULEUR DU TEXTE DES ÉVÈNEMENTS NON LUS */
+}
+#app-mount .containerDefault_c69b6d .modeUnreadImportant__2ea32 .link__2ea32 {
+    background: var(--foreground) !important; /* COULEUR DU SALON LORS DE MESSAGES NON LUS */
+}
+#app-mount ._2ea32c412048f708-numberBadge { /* COULEUR BADGE EVENEMENTS */
+    background: darkred;
+}
+.container__0d0f9.containerWithMargin__0d0f9, .channelNotice_e2d7b8 {
+    border-bottom-color: orange;
+}
+.channelNotice_e2d7b8 {
+    background: var(--reactions-idle-70);
+}
+#app-mount .containerDefault_c69b6d .modeUnreadImportant__2ea32:hover .link__2ea32, .containerDefault_c69b6d:has(.unreadImportant__2ea32) .basicChannelRowLink__2ea32:hover {
+    background: var(--notif) !important; /* COULEUR DU SALON LORS DE MESSAGES NON LUS HOVER */
+}
+/* #app-mount .containerDefault_c69b6d .modeUnreadImportant__2ea32:active .link__2ea32 {
+    background: var(--selected-60) !important; /* COULEUR DU SALON LORS DE MESSAGES NON LUS SUR CLIC */
+
+#app-mount .containerDefault_c69b6d .link__2ea32:hover, /* DÉCOUVRIR HOVER */ .navItem__551b0:hover, /* RECHERCHE DÉCOUVRIR HOVER */.fe77d6263995d6eb-category:hover {
+    background: var(--hovered-50); /* COULEUR DU SALON EN HOVER */
+}
+#app-mount /* RECHERCHE DÉCOUVRIR IDLE */.fe77d6263995d6eb-category .fe77d6263995d6eb-name, .fe77d6263995d6eb-category .fe77d6263995d6eb-count {
+    color: rgb(163, 163, 163) !important;
+}
+#app-mount /* RECHERCHE DÉCOUVRIR HOVER */.fe77d6263995d6eb-category:hover .fe77d6263995d6eb-name, .fe77d6263995d6eb-category:hover .fe77d6263995d6eb-count {
+    color: white !important;
+}
+#app-mount /* RECHERCHE DÉCOUVRIR SELECTED */.fe77d6263995d6eb-category.fe77d6263995d6eb-selected .fe77d6263995d6eb-name, .fe77d6263995d6eb-category.fe77d6263995d6eb-selected .fe77d6263995d6eb-count {
+    color: white !important;
+}
+#app-mount .childContainer__91a9d:hover /* MEMBRES SERVER HOVER */, /* Membres d'un vocal */ ._07f9193042954787-content:hover {
+    background: var(--hovered-50);
+    color: white;
+}
+#app-mount .childContainer__91a9d.nameplated__91a9d:hover, .member__5d473.selected__91a9d > .childContainer__91a9d.nameplated__91a9d { /* NAMEPLATES */
+    background: none !important;
+    box-shadow: 0 0 4px color-mix(in srgb, lightpink 100%, transparent);
+}
+#app-mount .img__4bbc6 { /* NAMEPLATES IMG / IMAGES */
+    opacity: 1 !important;
+}
+#app-mount .member__5d473 ._91a9d7f7e5248a56-layout:hover .activityText__5d473, .member__5d473.selected__91a9d .activityText__5d473/* MEMBRES SERVER HOVER COULEUR TEXTE */ {
+    color: white !important;
+}
+#app-mount .member__5d473.selected__91a9d > .childContainer__91a9d /* MEMBRES SERVER SELECTED */{
+    background: var(--smooth-purple);
+}
+#app-mount .membersGroupHeader_c8ffbb, .membersGroup_c8ffbb:not(:has(.membersGroupHeader_c8ffbb)) /* LES RÔLES DES MEMBRES */, .headerText__99e7c /* TITRE MESSAGES PRIVES */, .title__1472a /* EN LIGNE SERVER PRIVÉS */, .header__7d20c /*  EN LIGNER SERVER PRIVÉ */, .sectionTitle_f391e3 /* DEMANDES */, .sectionTitle_dcc822 /* SPAMS */ {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.7);
+    border-left: 3px solid rgb(236, 157, 38);
+    padding: 5px;
+    padding-left: 8px;
+    background: linear-gradient(to right, rgb(236, 157, 38, 0.2), transparent);
+}
+.membersGroup_c8ffbb:not(:has(.membersGroupHeader_c8ffbb)) { /* MEMBRES DANS LES THREADS ET FORUMS */
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+#app-mount .containerDefault_c69b6d .link__2ea32 .icon__2ea32:hover {
+    color: var(--interactive-hover); /* TEXTE DES SALONS EN HOVER */
+}
+#app-mount .containerDefault_c69b6d.selected_c69b6d .link__2ea32,
+.modeSelected__2ea32 .link__2ea32, /* EVENEMENT, MEMBRES ETC SELECTED */
+/* DÉCOUVRIR SELECTED */ .navItem__551b0.selected__551b0,
+/* CATEGORIES DE RECHERCHES */ .fe77d6263995d6eb-category.fe77d6263995d6eb-selected {
+    background: var(--selected) !important; /* COULEUR DU SALON SELECTIONNÉ */
+}
+/* #app-mount .containerDefault_c69b6d:active .link__2ea32 {
+    background: var(--selected-60) !important; /* COULEUR DU SALON SUR CLIC */
+
+#app-mount .containerDefault_c69b6d:hover .link__2ea32 .icon__2ea32 {
+    color: rgb(255, 255, 255) !important; /* COULEUR DE L'HASHTAG DU SALON EN HOVER */
+}
+#app-mount .containerDefault_c69b6d.selected_c69b6d .link__2ea32 .icon__2ea32, .modeSelected__2ea32 .link__2ea32 .icon__2ea32 {
+    color: rgb(255, 255, 255) !important; /* COULEUR DE L'HASHTAG DU SALON SELECTIONNÉ */
+}
+#app-mount .containerDefault_c69b6d .text-xs\/semibold_cf4812 /* COULEUR DES ICONES */ { /* NOMBRES DE NOUVEAUX MESSAGES FORUMS */
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0 7px #fded03 !important;
+}
+#app-mount .containerDefault_c69b6d .link__2ea32:has(.text-xs\/semibold_cf4812) { /* SALONS DE FORUMS QUI LA PETITE ICONE DE MESSAGES NON LUS */
+    background: var(--reactions-idle-70);
+}
+#app-mount .containerDefault_c69b6d .link__2ea32:has(.text-xs\/semibold_cf4812):hover { /* SALONS DE FORUMS QUI LA PETITE ICONE DE MESSAGES NON LUS HOVER */
+    background: var(--only-purple);
+}
+#app-mount .containerDefault_c69b6d:has(+ .container__5b40b) .icon__2ea32 { /* ICONE DE FORUMS AVEC DES THREADS IDLE */
+    color: rgba(255, 255, 255, 0.9);
+    /* color: rgba(255, 217, 0, 0.8); */
+}
+#app-mount .containerDefault_c69b6d .link__2ea32:has(.text-xs\/semibold_cf4812) .icon__2ea32 { /* ICONE DE FORUMS AVEC DES THREADS NEW MESSAGE */
+    color: rgba(255, 217, 0, 0.9);
+}
+#app-mount .container__5b40b .spineBorder__5b40b  { /* Couleur icone forum lorsque salon selected */
+    background: rgba(255, 255, 255);
+}
+#app-mount .container__5b40b:has(.modeUnreadImportant__2ea32) .spineBorder__5b40b {
+    background: rgba(255, 217, 0, 0.9);
+}
+#app-mount .container__5b40b .spine__5b40b { /* COULEUR ICONE FORUM LORSQUE SALON SELECTED */
+    color: rgba(255, 255, 255);
+}
+#app-mount .container__5b40b:has(.modeUnreadImportant__2ea32) .spine__5b40b { /* Couleur icone forum lorsque salon selected */
+    color: rgba(255, 217, 0, 0.9);
+}
+
+/*  #app-mount .containerDefault_c69b6d:hover .c69b6db0641110f6-iconItem { */ /* Couleur des icones A travailler*/
+    /*  color: rgb(199, 30, 30) !important;
+} */
+#app-mount .ef3116c2da186559-unreadMentionsBar._3b95d7d910416e54-mention/* BOUTON "NOUVEAU" EN ROUGE */{
+    /* background: var(--selected); */
+    color: white;
+    border-radius: 8px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 11px;
+}
+#app-mount .vc-ranb-button /*._201d5e8a3c09670a-contents /* BOUTON "READ ALL" */ {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(139, 0, 0);
+    padding: 2px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    box-shadow: 0 0 6px 1px gold;
+    /* margin-bottom: 10px; */
+}
+#app-mount .vc-ranb-button  /* BOUTON "READ ALL" ESPACEMENT */ {
+    margin-bottom: 10px !important;
+}
+#app-mount .vc-ranb-button:not(:has(+ .listItem__650eb .guildSeparator__252b6)) /* BOUTON "READ ALL" ESPACEMENT SEULEMENT QUAND UN NEW PRIVATE MESSAGE */ {
+    margin-bottom: 15px !important;
+}
+#app-mount .guildSeparator__252b6 { /* LE SEPARATOR SOUS READ ALL */
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 230, 0);
+    box-shadow: 0 0 8px rgb(255, 230, 0);
+    /* border-radius: 1px; */
+    height: 1px;
+}
+#app-mount .vc-ranb-button/*._201d5e8a3c09670a-contents*/:hover /* BOUTON "READ ALL" HOVER */ {
+    background: var(--green-flag-50);
+    color: rgba(255, 255, 255);
+    box-shadow: 0 0 3px 1px gold;
+}
+#app-mount .vc-ranb-button/*._201d5e8a3c09670a-contents*/:active /* BOUTON "READ ALL" CLIC */ {
+    background: var(--green-flag-100);
+    color: rgba(255, 255, 255);
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* SALONS PRIVÉS */
+
+.container__9293f { /* TOP BAR "EN LIGNE, AJOUTER, ETC..." */
+    background: var(--reactions-idle-50) !important;
+}
+
+.upperContainer__9293f .tabBar__133bf { /* TOP BAR "EN LIGNE, AJOUTER, ETC..." */
+    padding: 5px;
+}
+
+#app-mount .upperContainer__9293f .item__133bf, .upperContainer__9293f .item_aa8da2 { /* TOP BAR "EN LIGNE, AJOUTER, ETC..." HOVER */
+
+    &:hover {
+    background: var(--only-purple-50);
+    }
+}
+#app-mount .upperContainer__9293f .selected_aa8da2 { /* TOP BAR "EN LIGNE, AJOUTER, ETC..." SELECTED */
+    color:  var(--status-positive-text);
+    background: var(--only-purple) !important;
+}
+#app-mount .upperContainer__9293f .addFriend__133bf[aria-selected=false]:hover { /* TOP BAR "AJOUTER" HOVER */
+    background: var(--status-positive-background);
+    box-shadow: 0 0 7px 1px gold;
+}
+
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactiveSelected__972a0 {
+    background: var(--selected) !important; /* SALON SELECTIONNÉ */
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactiveSelected__972a0 .nameAndDecorators__20a53, .privateChannels_e6b769 .interactiveSelected__972a0 .overflow_b0dfc2 {
+    color: white !important; /* SALON SELECTIONNÉ TEXTE */
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:hover {
+    background: var(--hovered-45); /* SALON HOVER */
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:hover .overflow_b0dfc2, .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5) /* AU DESSUS DES MESSAGES PRIVÉS */, .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5):hover .linkButtonIcon__972a0 {
+    color: rgba(255, 255, 255); /* SALON HOVER SOUS-TEXTE*/
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:active {
+    background: var(--selected-60) !important; /* COULEUR DU SALON SUR CLIC */
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0 ._972a0d22c8afa7f0-closeIcon:hover {
+    background: red;
+    border-radius: 5px;
+} /* _972a0d22c8afa7f0-link */
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(._20a53846fe2e8513-highlighted ) /* Nouveau message privé */ , .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5) /* AU DESSUS DES MESSAGES PRIVÉS */ {
+    background: var(--notif-60);
+}
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(._20a53846fe2e8513-highlighted ):hover /* Nouveau message privé HOVER */, .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5):hover /* AU DESSUS DES MESSAGES PRIVÉS */ {
+    background: var(--notif) !important;
+}
+#app-mount .sidebar__5e434 ._98c7bb4db473bc75-newBadge {  /* BADGE RECOMPENSE NITRO */
+    background: var(--red-gradient);
+    box-shadow: 0 0 4px 2px gold;
+    margin-right: 5px;
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* RECHERCHE DE SALONS */
+
+#app-mount .returnButton__0b563 { /* BOUTON RETOUR À "SALON" EN IDLE */
+    background: var(--red-gradient-50);
+}
+#app-mount .returnButton__0b563:hover {
+    background: var(--green-flag-50);
+}
+#app-mount .returnButton__0b563:active {
+    background: var(--green-flag-100);
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* FORUMS */
+
+#app-mount .newBadgeWrapper_faa96b .newBadge_faa96b /* POP UP D'UN NEW TOPIC CRÉÉ */, /* BADGES SALONS PRIVÉS */
+._4ed1af9a212b8f4f-newBadge, .newBadge__9a337 /* BADGE DES FORUMS */,
+._4ed1af9a212b8f4f-newBadge /* BADGE NEW SALONS PRIVES */,
+/* BADGE DIRECT DES VC */.a7acaedd978a9637-live,
+/* BADGE DANS PROFIL */ .newBadge__25879,
+/* Salons & rôles */ ._270d7a28db32b312-newBadge,
+.e4ef2250e26e0a8f-premiumTrialAcknowledgedBadge /* Badge essai premium */ {
+    background: var(--red-gradient);
+    color: white;
+    /* border: 1px solid rgba(255, 255, 255, 0.6); */
+    box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
+    margin-right: 2px;
+}
+#app-mount .newBadge__9a337 /* BADGE DES FORUMS */{
+    padding-top: 0.15rem;
+}
+#app-mount .container_faa96b:hover {
+    background: var(--hovered-45); /* SALONS DES FORUMS EN HOVER */
+    border: 1px solid rgb(163, 163, 163, 0.8);
+}
+#app-mount .container_faa96b:hover h3, .container_faa96b.isOpen_faa96b h3, .container_faa96b.isOpen_faa96b .messageContent_faa96b {/* TITRE ET MESSAGE DES FORUMS EN HOVER ET UNE FOIS SELECTIONNE */
+    color: rgba(255, 255, 255) !important;
+}
+#app-mount .container_faa96b:hover .messageContent_faa96b {
+    color: rgba(255, 255, 255, 0.8); /* MESSAGE DES FORUMS EN HOVER */
+}
+#app-mount .container_faa96b.isOpen_faa96b {
+    background: var(--selected) !important;
+    border: 1px transparent; /* Couleur du forum selectionné */
+}
+/* #app-mount ._99f8cc7ad4790ce9-scrolling {
+    background: red;
+} */   /* When scrolling !!! */
+#app-mount .container_faa96b.mainCard_f369db:has(.hasUnreads_d3eee8) { /* POST CONTENANT DES MESSAGES NON LUS */
+    background: var(--notif-40);
+    border: 1px transparent;
+}
+#app-mount .container_faa96b.mainCard_f369db:has(.hasUnreads_d3eee8):hover { /* POST CONTENANT DES MESSAGES NON LUS HOVER*/
+    background: var(--notif-80);
+    border: 1px transparent;
+}
+#app-mount .container_faa96b .newMessageCount_faa96b, .container__9a337 .newMessageCount_faa96b { /* NEW MESSAGE ENCADRÉ VERT */
+    background: #369c74;
+    border: 3px solid #369c74;
+    border-radius: 8px;
+    /* animation: pulse 3s infinite; */
+    color:rgba(255, 255, 255, 0.7) !important;
+}
+#app-mount .container_faa96b .newMessageCount_faa96b:hover, .container__9a337 .newMessageCount_faa96b:hover { /* New message on HOVER */
+    background: #10bbad;
+    border-color: #10bbad;
+    color: darkblue !important;
+}
+#app-mount .container_faa96b:has(.newMessageCount_faa96b) { /* New message dans les salons de forums*/
+    background: var(--red-gradient-70);
+    border: 1px transparent;
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* MENUS CONTEXTUELS */
+
+#app-mount .menu_c1e9c4, .popover_d6f39b /* Pop UP TAGS */, .container__16eb0 /* Search FILTERS | recherche */ {
+    background: var(--reactions-idle);
+}
+
+#app-mount .separator_c1e9c4 {   
+    border: 1px solid rgba(122, 96, 57, 0.6);
+}
+#app-mount .colorDefault_c1e9c4.focused_c1e9c4 {
+    background: var(--hovered);
+}
+#app-mount .c1e9c47c23f12ca3-colorDanger.focused_c1e9c4 {
+    background: var(--red-gradient-50);
+    border-top: 1px solid gold;
+}
+#app-mount ._2b1f52e43a8f1c02-textBadge /* NOUVEAU DANS MENUS */ {
+    background: var(--red-gradient);
+    color: white;
+    box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
+    margin-left: 2px;
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* REACTIONS TO FORUMS */
+
+#app-mount .reaction_f8896c.reactionMe_f8896c { /* REACTIONS ACTIVE DANS LA LISTE DES TOPICS */
+    background: var(--green-flag);
+    /* border: 2px solid green; */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: rgb(104, 240, 228, 0.7) 0px 0px 8px;
+}
+#app-mount .secondary_a22cb0:has(svg path[d*="M21.7 5.3"]) { /* BOUTON ABONNÉ */
+    background: var(--green-flag) !important;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: rgb(104, 240, 228, 0.7) 0px 0px 8px;
+}
+#app-mount ._201d5e8a3c09670a-contents.buttonInner__34c2c /* BOUTON SUIVRE, COPIER LIEN ET ALLER EN HAUT */{
+    background: var(--red-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+}
+#app-mount ._201d5e8a3c09670a-contents.buttonInner__34c2c, .reaction_f8896c /* BOUTON SUIVRE, COPIER LIEN ET ALLER EN HAUT HOVER */{
+
+    &:hover {
+    background: var(--green-flag-50);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+    }
+}
+.reactionCount_f8896c, .reactionCount__23977 { /* NUMÉRO DE LIKES */
+    color: white !important;
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* TAGS POP UP */
+
+.caretIcon_d6f39b .caretFill_d6f39b { /* Petit Triangle/carret */
+    fill: rgb(73, 49, 13);
+}
+.tag_cdb3b1/* , ._10651c5cfe637db6-chipletContainerInline */ {
+    box-shadow: /* horizontal */0  /* Vertical */0  /* Blur */4px  /* Radius */1px gold;
+}
+
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* LOL BUTTONS/BOUTONS IN GENERAL */
+
+.button_a22cb0.primary_a22cb0 {
+
+    border-color: color-mix(in srgb, rgba(81, 160, 222) 50%, rgba(198, 198, 198, 0.1));
+	box-shadow: 0 0 6px color-mix(in srgb,  rgba(198, 198, 198) 40%, transparent);
+    background: var(--primary-button);
+    transition: none !important;
+
+    &:hover {
+        color: gold;
+		background: linear-gradient(var(--gradient-direction), rgb(109, 54, 212), rgb(46, 113, 158));
+        box-shadow: 0 0 6px  color-mix(in srgb, rgba(198, 198, 198) 100%, transparent);
+        border-color: rgba(255, 217, 0, 0.6);
+    }
+}
+
+.button_a22cb0.secondary_a22cb0 {
+
+    border-color: color-mix(in srgb, rgba(81, 160, 222) 50%, rgba(198, 198, 198, 0.1));
+	box-shadow: 0 0 6px color-mix(in srgb,  rgba(198, 198, 198) 40%, transparent);
+    background: var(--tooltip-gradient);
+    transition: none !important;
+
+    &:hover {
+        color: gold;
+		background: var(--hovered);
+        box-shadow: 0 0 6px  color-mix(in srgb, rgba(198, 198, 198) 100%, transparent);
+        border-color: rgba(255, 217, 0, 0.6);
+    }
+}
+/* #################################################################################### */
+/* #################################################################################### */
+
+
+/* OPTIONS */
+
+.container_a3e8db.default_a3e8db { /* QUÊTES - ORBS */
+
+    border-color: color-mix(in srgb, rgba(81, 160, 222) 50%, rgba(198, 198, 198, 0.1));
+	box-shadow: 0 0 6px color-mix(in srgb,  rgba(198, 198, 198) 40%, transparent);
+    background: var(--tooltip-gradient);
+    transition: none !important;
+}
+.container_a3e8db.highlighted_a3e8db, .container_a3e8db.selected_a3e8db {
+
+		background: var(--hovered);
+        box-shadow: 0 0 5px 0.5px rgba(255, 217, 0);
+        border-color: rgba(198, 198, 198, 0.8);
+
+        & ._98f64ec6d51f9c4a-balanceCounterText {
+        color: gold;
+        }
+}
+
+#app-mount .sectionLabel__409aa/*.aa8da23faa27393c-side .aa8da23faa27393c-header/* , .b717a15017b82443-h5 */ {
+    background: var(--notif-70);
+    border-radius: 3px; /*  SIDEBAR COULEUR DE L'EN-TÊTE */
+    margin-bottom: 3px;
+
+    & h1 {
+
+        color: white !important;
+
+    }
+}
+#app-mount .section__409aa:has(li[data-settings-sidebar-item="profile_panel"]) .item_caf372/* Modifier le profil panel */ {
+    background: var(--dark-purple);
+    box-shadow: 0 0 8px color-mix(in srgb, gold 100%, transparent);
+
+    &:hover {
+        background: var(--hovered);
+    }
+}
+.contentHeaderLeft_e9e3ed h1 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 0 1px rgba(252, 248, 4) !important;
+    font-size: 1.25rem;
+    /* text-transform: uppercase; */
+}
+#app-mount .item_caf372.active_caf372, .contentHeader_e9e3ed /* BG du header */ {
+    background: var(--selected) !important; /* SIDEBAR SELECTIONNÉ */
+}
+#app-mount .item_caf372:hover {
+    background: var(--hovered-45); /* SIDEBAR HOVER */
+}
+#app-mount .section__409aa:not(:has(li[data-settings-sidebar-item="profile_panel"])) /* SIDEBAR LES SÉPARATEURS */ {
+    border-bottom: 1px solid  color-mix(in srgb, red 60%, gold 70%);
+}
+
+#app-mount .aa8da23faa27393c-side .aa8da23faa27393c-item.aa8da23faa27393c-themed[aria-label="Supprimer le salon"], .item_caf372[data-list-item-id="settings-sidebar___logout_sidebar_item"], .aa8da23faa27393c-item.aa8da23faa27393c-themed[aria-label="Supprimer le serveur"], ._166631599d7f960b-clearButtonWrapper {
+    border: 2px solid darkred ; /* OPTIONS SUPPRIMER ET DÉCONNEXION */
+
+    &:hover {
+        background: darkred !important; /* OPTIONS SUPPRIMER ET DÉCONNEXION EN HOVER */
+    }
+}
+
+#app-mount ._1de9cda3548b962f-divider, .divider__60406, .roleRow_a930f1::before, .dividerDefault__0d850, /* DIVIDER SUR LE PANNEAU DE DROITE */ ._7641b507c6cdbb10-divider {
+    background: var(--notif) !important;
+    height: 1px;
+}
+#app-mount .divider_cd0bbe {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid transparent;
+    border-color: rgb(133, 68, 38);
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* SELECTION DES COMMANDES CHAT */
+
+/* #app-mount .clickable__13533.d1405bf11dcfb07a-itemWrapper.autocompleteRow__13533Vertical.autocompleteRow__13533[aria-selected="true"] {
+    background: var(--notif-60);
+    border-radius: 5px;
+} */
+.channelBottomBarArea_f75fb0 .bar__84522 /* INFO SUR LES COMMANDES */ {
+    background: var(--smooth-purple);
+    box-shadow: 0 0 2px 1px gold;
+    border-radius: 6px;
+}
+#app-mount .channelBottomBarArea_f75fb0 .description__84522/* DESCRIPTIONS TEXTE */ {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.7);
+}
+#app-mount .clickable__13533[aria-disabled=false] .base__13533:hover { /* Quand la souris survole */
+    background: var(--hovered-45);
+    border-radius: 5px;
+}
+#app-mount .clickable__13533.autocompleteRow__13533[aria-selected="true"] .base__13533{ /* Avec le clavier */
+    background: var(--notif-70);
+    border-radius: 5px;
+}
+#app-mount .clickable__13533 .base__13533 .text-xs\/normal_cf4812 /* DESCRIPTIONS */ {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-shadow: 0 0 1px rgba(252, 248, 4, 0.7) !important;
+    font-size: 1em;
+}
+#app-mount .autocomplete__13533 .categoryHeader_d1405b, .autocomplete__13533 .contentTitle__13533 /* HEADERS */ {
+    background: var(--gradient);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 2px 1px rgba(255, 217, 0, 0.7);
+}
+#app-mount .autocomplete__13533 .categoryHeader_d1405b .headerLabel__14245, .autocomplete__13533 .contentTitle__13533 /* HEADERS TEXTE */ {
+    color: white;
+}
+#app-mount .autocomplete__13533 .contentTitle__13533 /* HEADERS TEXTE */ {
+    padding-left: 5px;
+}
+
+/* #################################################################################### */
+/* #################################################################################### */
+
+/* PANNEAU DE DROITE | MSG PRIVÉS */
+
+.peopleListItem_cc6179:hover, .peopleListItem_cc6179.active_cc6179, /* LES POTES EN LIGNE */
+.messageRequestItem_abb9ad:hover /* DEMANDES */{ 
+    background: var(--channel-hover);
+}
+
+.messageRequestItem_abb9ad { /* MESSAGE SELCTIONNÉ */
+
+    &.selected_f391e3, &.selected_dcc822 {
+    background: var(--selected);
+    }
+}
+
+.emptyCard__7e549 { /* PERSONNE JOUE */
+    background: var(--dark-purple-30);
+    box-shadow: 0 0 6px 1px gold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* _7e549558f336cddb-itemCard _00943886e1cf89d1-wrapper bf1984a18b3ec6f0-outer bf1984a18b3ec6f0-padded bf1984a18b3ec6f0-interactive */
+#app-mount .refresh-active-now .itemCard__7e549 {
+    background: var(--dark-purple-70); /* LORSQU'UN CONTACT JOUE À UN JEU */
+    box-shadow: 0 0 3px 1px gold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+#app-mount .refresh-active-now .itemCard__7e549:hover {
+    background: var(--smooth-purple-70); /* LORSQU'UN CONTACT JOUE À UN JEU HOVER */
+}
+#app-mount .refresh-active-now .itemCard__7e549:hover .text-sm\/normal_cf4812 {
+    color: white !important;
+}
+#app-mount ._00943886e1cf89d1-body.bf1984a18b3ec6f0-inset { /* ENCADRÉ GENRE SPOTIFY */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+#app-mount ._7641b507c6cdbb10-private, ._7641b507c6cdbb10-instructions {
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 0 1px rgba(252, 248, 4);
+}

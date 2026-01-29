@@ -1179,6 +1179,25 @@ mask: linear-gradient(45deg, #000, transparent);
     margin-left: 2px;
 }
 
+.container_d3846c .container_dca174 { /* TAGS POP UP INFO */
+    background: var(--reactions-idle);
+
+    & .defaultColor__5345c { /* GUILD NAME */
+        color: gold !important;
+    }
+
+    & .members__6e500, & .body_dca174, .error_dca174{
+
+        & .text-sm\/normal_cf4812 {
+        color: rgba(255, 255, 255) !important;
+        }
+    }
+
+    & .trait_a2b4d3 {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
 /* #################################################################################### */
 /* #################################################################################### */
 
@@ -1217,7 +1236,7 @@ mask: linear-gradient(45deg, #000, transparent);
 /* #################################################################################### */
 /* #################################################################################### */
 
-/* TAGS POP UP */
+/* TAGS POP UP - AU DESSUS PROFIL */
 
 .caretIcon_d6f39b .caretFill_d6f39b { /* Petit Triangle/carret */
     fill: rgb(73, 49, 13);
@@ -1233,7 +1252,8 @@ mask: linear-gradient(45deg, #000, transparent);
 
 /* LOL BUTTONS/BOUTONS IN GENERAL */
 
-.button_a22cb0.primary_a22cb0 {
+.button_a22cb0.primary_a22cb0, /* GENERAL PRIMARY */
+.buttonContainer_dca174 .button_a22cb0 /* BOUTON TAGS POP UP INFO */ {
 
     border-color: color-mix(in srgb, rgba(81, 160, 222) 50%, rgba(198, 198, 198, 0.1));
 	box-shadow: 0 0 6px color-mix(in srgb,  rgba(198, 198, 198) 40%, transparent);

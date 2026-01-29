@@ -906,13 +906,16 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount .member__5d473.selected__91a9d > .childContainer__91a9d /* MEMBRES SERVER SELECTED */{
     background: var(--smooth-purple);
 }
-#app-mount .membersGroupHeader_c8ffbb, .membersGroup_c8ffbb:not(:has(.membersGroupHeader_c8ffbb)) /* LES RÔLES DES MEMBRES */, .headerText__99e7c /* TITRE MESSAGES PRIVES */, .title__1472a /* EN LIGNE SERVER PRIVÉS */, .header__7d20c /*  EN LIGNER SERVER PRIVÉ */, .sectionTitle_f391e3 /* DEMANDES */, .sectionTitle_dcc822 /* SPAMS */ {
+#app-mount .membersGroupHeader_c8ffbb, .membersGroup_c8ffbb:not(:has(.membersGroupHeader_c8ffbb)) /* LES RÔLES DES MEMBRES */, .headerText__99e7c /* TITRE MESSAGES PRIVES */, .title__1472a /* EN LIGNE SERVER PRIVÉS */, .header__7d20c /*  EN LIGNE SERVER PRIVÉ */, .sectionTitle_f391e3 /* DEMANDES */, .sectionTitle_dcc822 /* SPAMS */ {
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0 0 1px rgba(252, 248, 4, 0.7);
     border-left: 3px solid rgb(236, 157, 38);
     padding: 5px;
     padding-left: 8px;
     background: linear-gradient(to right, rgb(236, 157, 38, 0.2), transparent);
+}
+.privateChannelsHeaderContainer__99e7c { /* HEADER MSG PRIVÉS */
+    margin-bottom: 5px;
 }
 .membersGroup_c8ffbb:not(:has(.membersGroupHeader_c8ffbb)) { /* MEMBRES DANS LES THREADS ET FORUMS */
     margin-top: 30px;
@@ -1093,8 +1096,8 @@ mask: linear-gradient(45deg, #000, transparent);
 /* FORUMS */
 
 #app-mount .newBadgeWrapper_faa96b .newBadge_faa96b /* POP UP D'UN NEW TOPIC CRÉÉ */, /* BADGES SALONS PRIVÉS */
-._4ed1af9a212b8f4f-newBadge, .newBadge__9a337 /* BADGE DES FORUMS */,
-._4ed1af9a212b8f4f-newBadge /* BADGE NEW SALONS PRIVES */,
+.badge_c2b88c, .newBadge__9a337 /* BADGE DES FORUMS */,
+.badge_c2b88c /* BADGE NEW SALONS PRIVES */,
 /* BADGE DIRECT DES VC */.a7acaedd978a9637-live,
 /* BADGE DANS PROFIL */ .newBadge__25879,
 /* Salons & rôles */ ._270d7a28db32b312-newBadge,

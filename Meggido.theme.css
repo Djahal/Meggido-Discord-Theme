@@ -192,6 +192,10 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount .reaction__23977 /* REACTIONS FORUM PANEL OUVERT */ , .reactionBtn__23977.forceShow__23977, .addReactButton__34c2c /* RÉACTIONS AUX MESSAGES */ {
     background: var(--reactions-idle-50);
     border: 1px solid rgba(255, 255, 255, 0.2); /* MEILLEURE BORDURE POUR REACTIONS ET BOUTONS */
+
+    &:hover {
+        background: var(--green-flag-50);
+    }
 }
 
 #app-mount .c19a557985eb7793-cozy.c19a557985eb7793-hasThread:after { /* LES BARRES DANS LES MESSAGES QUI POINTENT VERS LES THREADS */
@@ -797,6 +801,9 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount .reactionEmojiDetailsClickable_d5cd2d:hover, .d5cd2da5733d0b6e-ctaButton:hover {
     background: var(--green-flag-100);
     /* border: 1px solid rgba(255, 255, 255, 0.4);  */
+}
+.reactionEmojiDetailsDivider_d5cd2d {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ###### LES SALONS  ######*/

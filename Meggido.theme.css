@@ -476,6 +476,10 @@ mask: linear-gradient(45deg, #000, transparent);
     background: var(--reactions-idle); 
     border: 1px solid rgba(255, 217, 0, 0.3);
 }
+.nonVisualMediaItem_f4758a .mosaicItem__6c706 { /* BLOCK DE PARTAGE CODE DÉROULANT */
+    outline: 1px solid rgba(255, 217, 0, 0.3);
+    border-radius: 8px;
+}
 #app-mount .pollContainer_b7e1cb, .container_f69538.embed_f69538 { /* LES SONDAGES DANS LES MESSAGES - BACKGROUND */
     background: var(--reactions-idle);
 }
@@ -858,6 +862,13 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount .containerDefault__29444 .overflow_b0dfc2 /* TITRES DES CATÉGORIES */ {
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0 0 4px rgba(252, 248, 4, 0.7);
+}
+.mainContent__29444 { /* TITRES DES CATÉGORIES DÉCORATIONS */
+    border-left: 3px solid rgb(236, 157, 38);
+    background: linear-gradient(to right, rgb(236, 157, 38, 0.2), transparent);
+    padding-left: 8px;
+    margin-bottom: 10px;
+    margin-left: -5px;
 }
 #app-mount .containerDefault__29444 .mainContent__29444:hover .overflow_b0dfc2, .containerDefault__29444 .addButtonIcon__29444:hover, .headerText__99e7c:hover { /* LES CATÉGORIES HOVER */
     color: rgba(255, 255, 255);

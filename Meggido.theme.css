@@ -198,17 +198,18 @@ mask: linear-gradient(45deg, #000, transparent);
     }
 }
 
-#app-mount .c19a557985eb7793-cozy.c19a557985eb7793-hasThread:after { /* LES BARRES DANS LES MESSAGES QUI POINTENT VERS LES THREADS */
+#app-mount .cozy_c19a55.hasThread_c19a55:after { /* LES BARRES DANS LES MESSAGES QUI POINTENT VERS LES THREADS */
     border-color: rgb(240, 178, 50, 0.9);
     border-width: 2px;
 }
-#app-mount ._9271d23503a01b50-container { /* L'encadré du Threads */
+#app-mount .container__9271d { /* L'encadré du Threads */
     border: 1px solid rgb(240, 178, 50, 0.9);
+    background: var(--reactions-idle-70);
 }
-#app-mount ._9271d23503a01b50-container:hover { /* L'encadré du Threads HOVER */
+#app-mount .container__9271d:hover { /* L'encadré du Threads HOVER */
     background: var(--dark-purple);
 }
-#app-mount ._9271d23503a01b50-container:hover ._9271d23503a01b50-timestamp, ._9271d23503a01b50-container:hover .c19a557985eb7793-threadMessageAccessoryPreview { /* Timestamp Threads HOVER */
+#app-mount .container__9271d:hover ._9271d23503a01b50-timestamp, .container__9271d:hover .c19a557985eb7793-threadMessageAccessoryPreview { /* Timestamp Threads HOVER */
     color: white;
 }
 #app-mount .messageListItem__5126c .mentioned__5126c{ /* Couleur des Mentions */
@@ -479,6 +480,9 @@ mask: linear-gradient(45deg, #000, transparent);
 .nonVisualMediaItem_f4758a .mosaicItem__6c706 { /* BLOCK DE PARTAGE CODE DÉROULANT */
     outline: 1px solid rgba(255, 217, 0, 0.3);
     border-radius: 8px;
+}
+.mediaArea_e03578 { /* ENCADRÉ DES IMAGES EN FULL VIEW */
+    border: 1px solid rgba(255, 217, 0, 0.3);
 }
 #app-mount .pollContainer_b7e1cb, .container_f69538.embed_f69538 { /* LES SONDAGES DANS LES MESSAGES - BACKGROUND */
     background: var(--reactions-idle);
@@ -860,8 +864,8 @@ mask: linear-gradient(45deg, #000, transparent);
     border-bottom:  1px solid orange;
 }
 #app-mount .containerDefault__29444 .overflow_b0dfc2 /* TITRES DES CATÉGORIES */ {
-    color: rgba(255, 255, 255, 0.85);
-    text-shadow: 0 0 4px rgba(252, 248, 4, 0.7);
+    color: rgba(255, 255, 255);
+    /* text-shadow: 0 0 4px rgba(252, 248, 4, 0.7); */
 }
 .mainContent__29444 { /* TITRES DES CATÉGORIES DÉCORATIONS */
     border-left: 3px solid rgb(236, 157, 38);
@@ -1105,10 +1109,10 @@ mask: linear-gradient(45deg, #000, transparent);
     background: red;
     border-radius: 5px;
 } /* _972a0d22c8afa7f0-link */
-#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(._20a53846fe2e8513-highlighted ) /* Nouveau message privé */ , .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5) /* AU DESSUS DES MESSAGES PRIVÉS */ {
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(.highlighted__20a53 ) /* Nouveau message privé */ , .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5) /* AU DESSUS DES MESSAGES PRIVÉS */ {
     background: var(--notif-60);
 }
-#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(._20a53846fe2e8513-highlighted ):hover /* Nouveau message privé HOVER */, .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5):hover /* AU DESSUS DES MESSAGES PRIVÉS */ {
+#app-mount .sidebar__5e434 .privateChannels_e6b769 .interactive__972a0:has(.highlighted__20a53 ):hover /* Nouveau message privé HOVER */, .privateChannels_e6b769 .interactive__972a0:has(.numberBadge__2b1f5):hover /* AU DESSUS DES MESSAGES PRIVÉS */ {
     background: var(--notif) !important;
 }
 #app-mount .sidebar__5e434 ._98c7bb4db473bc75-newBadge {  /* BADGE RECOMPENSE NITRO */

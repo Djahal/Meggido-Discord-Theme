@@ -705,10 +705,10 @@ mask: linear-gradient(45deg, #000, transparent);
     justify-content: center;
     align-items: center;
 }
-#app-mount .b49891f8a231dbff-burstReactionTooltipPrompt { /* SUPER REACTION TOOLTIP */
+#app-mount .bbcccbf8a231dbff-burstReactionTooltipPrompt { /* SUPER REACTION TOOLTIP */
     border-top: 1px solid rgb(255, 255, 255, 0.5);
 }
-#app-mount .b49891f8a231dbff-burstReactionTooltipPromptClickable:hover .text-sm\/normal_cf4812 { /* SUPER REACTION TOOLTIP TEXTE HOVER*/
+#app-mount .bbcccbf8a231dbff-burstReactionTooltipPromptClickable:hover .text-sm\/normal_cf4812 { /* SUPER REACTION TOOLTIP TEXTE HOVER*/
     color: gold;
 }
 #app-mount .row__76f04, ._76f047ded9fef6d4-timestamp { /* Couleur du texte des liens */
@@ -777,7 +777,7 @@ mask: linear-gradient(45deg, #000, transparent);
 
 /* REACTION TOOLTIP */
 
-#app-mount .reactionTooltip_b49891, /* Cliquer et connaitre EMOJI server provenance */.emojiSection_d5cd2d {
+#app-mount .reactionTooltip_bbcccb, /* Cliquer et connaitre EMOJI server provenance */.emojiSection_d5cd2d {
     background: var(--tooltip-gradient);
 }
 #app-mount .popoutContainer__0f481 .defaultColor__4bd52.text-md\/semibold_cf4812,
@@ -798,23 +798,27 @@ mask: linear-gradient(45deg, #000, transparent);
 /* #app-mount .faf9c0f0be1b8685-didRender .overflow_b0dfc2 {
     color: gold;
 } */
-#app-mount .reactionTooltipText_b49891 {
+#app-mount .reactionTooltipText_bbcccb {
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
 }
-#app-mount .reactionEmojiDetailsClickable_d5cd2d, .d5cd2da5733d0b6e-ctaButton {
+#app-mount .reactionEmojiDetailsClickable__5a408, .d5cd2da5733d0b6e-ctaButton {
     background: var(--red-gradient-70);
     /* border: 1px solid rgba(255, 255, 255, 0.2); */
 }
-#app-mount .reactionEmojiDetailsClickable_d5cd2d:hover, .d5cd2da5733d0b6e-ctaButton:hover {
+#app-mount .reactionEmojiDetailsClickable__5a408:hover, .d5cd2da5733d0b6e-ctaButton:hover {
     background: var(--green-flag-100);
     /* border: 1px solid rgba(255, 255, 255, 0.4);  */
 }
-.reactionEmojiDetailsDivider_d5cd2d {
+.reactionEmojiDetailsDivider__5a408 {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ###### LES SALONS  ######*/
+
+.tutorialContainer__1f388 { /* Serveur privé */
+    margin-top: 15px;
+}
 
 #app-mount .sidebar__5e434 .header_f37cb1 { /* COULEUR DU NOM DU SERVEUR */
     background: var(--smooth-purple);
@@ -884,7 +888,7 @@ mask: linear-gradient(45deg, #000, transparent);
     color: rgba(255, 255, 255);
     text-shadow: 0 0 6px rgba(252, 248, 4);
 }
-#app-mount .channelInfo_c69b6d .textBadge__2b1f5 /* Pop up d'un nouveau salon crée */, ._7aaec78b97ff00f7-mentionsBar, /* ABSOLUMENT TOUS LES PETITES ICONES RONDES : ._2b1f52e43a8f1c02-baseShapeRound */.containerPadding__7aaec .bar__7aaec /* NEW MESSAGE POP UP BOTTOM SALONS */, ._5126c0cd07f243a0-buttonsInner ._2b1f52e43a8f1c02-baseShapeRound, ._599fa27f4d2464c6-newChannel, .textBadge__2b1f5 { 
+#app-mount .channelInfo_c69b6d .textBadge__2b1f5 /* Pop up d'un nouveau salon crée */, ._7aaec78b97ff00f7-mentionsBar, /* ABSOLUMENT TOUS LES PETITES ICONES RONDES : ._2b1f52e43a8f1c02-baseShapeRound */.containerPadding__7aaec .bar__7aaec /* NEW MESSAGE POP UP BOTTOM SALONS */, ._5126c0cd07f243a0-buttonsInner ._2b1f52e43a8f1c02-baseShapeRound, ._599fa27f4d2464c6-newChannel, .textBadge__2b1f5, .textBadge__463b7 /* New Salons & roles */ { 
     background: var(--red-gradient);
     /* border: 1px solid rgba(255, 255, 255, 0.6); */
     box-shadow: 0 0 1px 1.3px rgba(255, 217, 0, 0.7);
@@ -1041,9 +1045,9 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount .vc-ranb-button  /* BOUTON "READ ALL" ESPACEMENT */ {
     margin-bottom: 10px !important;
 }
-#app-mount .vc-ranb-button:not(:has(+ .listItem__650eb .guildSeparator__252b6)) /* BOUTON "READ ALL" ESPACEMENT SEULEMENT QUAND UN NEW PRIVATE MESSAGE */ {
+/* #app-mount .vc-ranb-button:not(:has(+ .listItem__650eb .guildSeparator__252b6))  BOUTON "READ ALL" ESPACEMENT SEULEMENT QUAND UN NEW PRIVATE MESSAGE {
     margin-bottom: 15px !important;
-}
+} */
 #app-mount .guildSeparator__252b6 { /* LE SEPARATOR SOUS READ ALL */
     background: rgb(255, 255, 255);
     border: 1px solid rgb(255, 230, 0);

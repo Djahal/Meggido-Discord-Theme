@@ -896,7 +896,7 @@ mask: linear-gradient(45deg, #000, transparent);
 #app-mount ._7aaec78b97ff00f7-mentionsBar:hover, .containerPadding__7aaec .bar__7aaec:hover  { /* NEW MENTIONS DANS LA BARRE DES SALONS et NEW MESSAGE POP UP BOTTOM SALONS */
     background: var(--green-flag-100);
 }
-#app-mount ._2b1f52e43a8f1c02-number /* LES PETITS BADGES/ICONES SUR LES SALONS */, ._2b1f52e43a8f1c02-iconBadge, .numberBadge__2b1f5 {
+#app-mount ._2b1f52e43a8f1c02-number /* LES PETITS BADGES/ICONES SUR LES SALONS */, ._2b1f52e43a8f1c02-iconBadge, .numberBadge__463b7 /* Badge des Salons & Serveurs */ {
 
     box-shadow: 0 0 3px 1px rgb(255, 217, 0);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -1152,7 +1152,7 @@ mask: linear-gradient(45deg, #000, transparent);
 /* BADGE DIRECT DES VC */.a7acaedd978a9637-live,
 /* BADGE DANS PROFIL */ .newBadge__17510,
 /* Salons & rôles */ ._270d7a28db32b312-newBadge,
-.e4ef2250e26e0a8f-premiumTrialAcknowledgedBadge /* Badge essai premium */ {
+.premiumTrialBadge__4c1e4 /* Badge essai premium */ {
     background: var(--red-gradient);
     color: white;
     /* border: 1px solid rgba(255, 255, 255, 0.6); */
